@@ -1,51 +1,56 @@
-# BOILERPLATE CYPRESS
+# Boilerplate Cypress
 
-O objetivo deste repositório é fornecer um ponto de partida inicial para a criação de testes automatizados com o framework Cypress.
+Este repositório oferece um ponto de partida para criar testes automatizados com Cypress.
 
-### Recursos do Cypress
-- [Documentação Oficial do Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+## Recursos
 
-- ![Cypress Version](https://img.shields.io/badge/cypress-13.14.0-brightgreen)
+- [Documentação oficial do Cypress](https://docs.cypress.io/guides/getting-started/installing-cypress)
+- Cypress definido em `package.json` (faixa compatível: `^13.14.2`)
 
+## Instalação
 
-### Instalação:
-Para iniciar um projeto node e instalar o Cypress como dependência de desenvolvimento, siga os seguintes passos:
+Para instalar as dependências já definidas neste repositório:
 
-1. Inicie um projeto node:
-```npm init```
+```bash
+npm ci
+```
 
-2. Instale o Cypress como depedência de dev:
-```npm install cypress --save-dev```
-### Sugestão de Estrutura de Pastas
+Em um projeto novo, inicialize o Node.js com `npm init` e instale o Cypress como dependência de desenvolvimento:
 
-```cypress/
+```bash
+npm install --save-dev cypress
+```
+
+## Estrutura sugerida
+
+```text
+cypress/
   fixtures/
     api/
-      example.json     // Arquivo JSON com dados para testes da API
     web/
-      example.json     // Arquivo JSON com dados para testes de interface web
   support/
-    commands.js        // Arquivo com comandos customizados
-    e2e.js             // Arquivo com configurações adicionais para testes de e2e
+    commands.js
+    e2e.js
   e2e/
     api/
-      example_spec.js  // Testes da API
     web/
-      example_spec.js  // Testes de interface web
-  cypress.config.js    // Arquivo de configuração principal do Cypress
+cypress.config.js
 ```
-### Executar Testes
 
-- ```npm run cy:test```
-- ```npx cypress run --e2e```
+## Executar os testes
 
-### Desenvolvido por:
-[![Ana Carolina D. A. dos Santos](https://img.shields.io/badge/GitHub-Perfil-%23181717?logo=github)](https://github.com/AnacAntunes/)
+```bash
+npm run cy:test
+```
 
-### Cobertura de Testes
+Para abrir o Cypress em modo interativo:
 
-[WIP] A cobertura de código atual dos testes é de {coverage_percentage}%.
+```bash
+npm run cy:open
+```
 
-### Status CI:
+## CI
 
-[![ci](https://github.com/AnacAntunes/cypress_initial/actions/workflows/ci.yml/badge.svg)](https://github.com/AnacAntunes/cypress_initial/actions/workflows/ci.yml)
+[![CI](https://github.com/AnaCarolinaSantos-qa/cypress_boilerplate/actions/workflows/ci.yml/badge.svg)](https://github.com/AnaCarolinaSantos-qa/cypress_boilerplate/actions/workflows/ci.yml)
+
+Desenvolvido por [Ana Carolina D. A. dos Santos](https://github.com/AnaCarolinaSantos-qa).
